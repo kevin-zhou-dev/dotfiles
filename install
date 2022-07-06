@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+BASDIR=$(dirname $0)
+cd $BASEDIR 
+
+ln -s ${PWD}/bashrc ~/.bashrc
