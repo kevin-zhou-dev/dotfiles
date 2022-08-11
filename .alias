@@ -1,0 +1,9 @@
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+# shortcuts examples 
+# https://github.com/webpro/dotfiles/blob/master/system/.alias
+# https://github.com/mathiasbynens/dotfiles/blob/main/.aliases

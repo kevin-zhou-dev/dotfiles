@@ -1,5 +1,8 @@
 # key bindings
+
+# history search binding https://stackoverflow.com/questions/791765/unable-to-forward-search-bash-history-similarly-as-with-ctrl-r/791800#791800 
 "\e[5~": history-search-backward # [Ctrl-R] - history-search- move backward
 "\e[6~": history-search-forward # [Ctrl-S] - history-search- move forward
+
 "\e[1;5C": forward-word  # [Ctrl-RightArrow] - move forward one word
 "\e[1;5D": backward-word  # [Ctrl-LeftArrow] - move backward one word

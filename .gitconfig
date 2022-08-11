@@ -44,7 +44,6 @@
 	sfs = show --format=fuller --stat
 	showtool = ! "st() { if [ -z $1 ]; then c='HEAD'; else c=$1; fi; git difftool $c~..$c; }; st"
 	info = ! "inf() { if git rev-parse ${1} >/dev/null 2>&1; then git cat-file -p $(git rev-parse ${1}); else echo Invalid object; fi }; inf"
-	cleanall = clean -fdx # this is dangerous, so it's intentionally long to type
 	stsh = stash --keep-index
 	staash = stash --include-untracked
 	update-submodules = submodule update --init --recursive
@@ -78,10 +77,18 @@
 
 [core]
     editor = vi
-
+	excludesfile = ~/.gitignore      # valid everywhere
+	
 [pretty]
 	line = "%C(auto)%h %<|(60,trunc)%s %C(green)%ad%C(auto)%d"
 	detail = "%C(auto)%h %s%n  %C(yellow)by %C(blue)%an %C(magenta)<%ae> [%G?] %C(green)%ad%n %C(auto)%d%n"
 
 [include]
     path = ~/.gitconfig_local
+
+
+[includeIf “gitdir:~/personal/”] # include for all .git projects under personnal/ 
+path = ~/personal/.gitconfig-pers
+ 
+[includeIf “gitdir:~/work/”]
+path = ~/work/.gitconfig-work

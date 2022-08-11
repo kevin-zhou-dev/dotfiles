@@ -1,8 +1,3 @@
-# BASDIR=$(dirname $0)
-# cd $BASEDIR 
-
-# ln -s ${PWD}/bashrc ~/.bashrc
-
 #!/usr/bin/env bash
 
 # go to parent directory of BASH_SOURCE (environmment variable)
@@ -16,8 +11,9 @@ function doIt() {
 	rsync --exclude ".git/" \
 		--exclude ".DS_Store" \
 		--exclude ".osx" \
-		--exclude "install.sh" \
-		--exclude "README.md" \
+		--exclude "*.sh" \
+		--exclude "*.md" \
+		--exclude "*.bak" \
 		--exclude "LICENSE" \
 		-avh --no-perms . ~;
   # execute commands and refresh env variables in bash_profile
