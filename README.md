@@ -3,13 +3,33 @@
 ## install
 
 go in local dotfiles directory and execute install.sh
+```bash
 cd dotfiles && source install.sh
+```
 
-## .bashrc
+## structure 
+
+./dotfiles
+./dotfiles/.bash_profile
+./dotfiles/.gitignore
+./dotfiles/.alias
+./dotfiles/.gitconfig
+./dotfiles/.inputrc
+./dotfiles/README.md
+./dotfiles/.vimrc
+./dotfiles/.zshrc
+./dotfiles/.bashrc
+./dotfiles/install.sh
+./dotfiles/dotfiles-local
+
+
+~## .bashrc
 
 - setting environment variables (adding that directory to $PATH)
 - telling your shell to do clever things (like set -o noclobber) and
 - adding various aliases to commands (like alias please=sudo)
+
+
 
 ## references
 
