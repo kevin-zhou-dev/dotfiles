@@ -27,13 +27,13 @@ cd dotfiles && source install.sh
 
 ### On Windows 
 
-WSL 2 : https://docs.microsoft.com/fr-fr/windows/wsl/about
-zsh : https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH 
-oh-my-zsh : https://github.com/ohmyzsh/ohmyzsh.git
-poetry : https://python-poetry.org/docs/#osx--linux--bashonwindows-install-instructions
-fzf : https://github.com/junegunn/fzf/wiki
-tldr : https://github.com/tldr-pages/tldr
-pre-commit : https://pypi.org/project/pre-commit/
+- WSL 2 : https://docs.microsoft.com/fr-fr/windows/wsl/about
+- zsh : https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH 
+- oh-my-zsh : https://github.com/ohmyzsh/ohmyzsh.git
+- poetry : https://python-poetry.org/docs/#osx--linux--bashonwindows-install-instructions
+- fzf : https://github.com/junegunn/fzf/wiki
+- tldr : https://github.com/tldr-pages/tldr
+- pre-commit : https://pypi.org/project/pre-commit/
 
 ## references
 
@@ -49,4 +49,3 @@ pre-commit : https://pypi.org/project/pre-commit/
 
 - https://github.com/mathiasbynens/dotfiles/blob/main/bootstrap.sh git + rsync
 - https://github.com/anishathalye/dotfiles dotbot
-
