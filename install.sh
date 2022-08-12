@@ -14,12 +14,15 @@ function doIt() {
 		--exclude "*.sh" \
 		--exclude "*.md" \
 		--exclude "*.bak" \
+		--exclude ".env" \
+		--exclude ".function" \
 		--exclude "LICENSE" \
 		-avh --no-perms . ~;
   # execute commands and refresh env variables in bash_profile
 	source ~/.bash_profile;
 }
 
+# temporarily exlude since empty
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
 	doIt;
 else

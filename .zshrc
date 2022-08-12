@@ -7,13 +7,6 @@ export ZSH="$HOME/.oh-my-zsh"
 # See other themes https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="agnoster"
 
-# Uncomment the following line to use hyphen-insensitive completion.
-# Case-sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
-
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
-
 # Display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
 
@@ -33,11 +26,10 @@ else
   export EDITOR='mvim'
 fi
 
-# source
+# source config files
 source $ZSH/oh-my-zsh.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-# Local config
-[ -f ~/dotfiles-local/.alias_local ] && source ~/dotfiles-local/.alias_local
+[ -f ~/dotfiles_local/.alias_local ] && source ~/dotfiles_local/.alias_local
 [ -f ~/.alias ] && source ~/.alias
 # start at home directory
 cd ~
