@@ -4,14 +4,14 @@
 
 go in local dotfiles directory and execute install.sh
 ```
-cd dotfiles && source install.sh
+cd dotfiles && chmod +x install.sh && ./install.sh
 ```
 
 ## Structure
 
 ```
 .
-├── .alias                  # custom aliases. Git-related aliases are defined in .gitconfig
+├── .alias                  # custom aliases. Git-related aliases are defined in .gitconfig and in ~/.oh-my-zsh/plugins/git
 ├── .bashrc                 # bash config, source .alias and local config (interactive non-login shell)
 ├── .bash_profile           # source .bashrc (login shell)
 ├── .gitconfig              # git config 
