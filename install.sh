@@ -16,6 +16,7 @@ function doIt() {
 		--exclude "*.bak" \
 		--exclude ".env" \
 		--exclude ".function" \
+		--exclude "*.sw*" \
 		--exclude "LICENSE" \
 		-avh --no-perms . ~;
   # execute commands and refresh env variables in bash_profile
