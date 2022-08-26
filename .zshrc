@@ -4,14 +4,24 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+# history
+HISTSIZE=10000
+SAVEHIST=10000
+# HISTFILE=~/.cache/zsh/history
+
+# vi mode
+bindkey -v
+export KEYTIMEOUT=1
+
 # See other themes https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="agnoster"
 
 # Display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
 
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
+# Activate syntax highlighting
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
+
 
 # Plugins
 # Standard plugins can be found in $ZSH/plugins/
@@ -27,9 +37,15 @@ else
 fi
 
 # source config files
-source $ZSH/oh-my-zsh.sh
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -f ~/dotfiles_local/.alias_local ] && source ~/dotfiles_local/.alias_local
 [ -f ~/.alias ] && source ~/.alias
+
+# oh-my-zsh
+[ -f $ZSH/oh-my-zsh.sh ] && source $ZSH/oh-my-zsh.sh
+# command-line fuzzy finder
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# fish like syntax highlight
+[ -f ~/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] &&  source ~/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 # start at home directory
 cd ~
