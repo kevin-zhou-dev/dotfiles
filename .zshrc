@@ -22,7 +22,6 @@ COMPLETION_WAITING_DOTS="true"
 # Activate syntax highlighting
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
 
-
 # Plugins
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/

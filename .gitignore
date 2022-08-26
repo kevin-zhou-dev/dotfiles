@@ -8,8 +8,5 @@ ENV/
 # Windows backup files 
 *.bak
 
-# local customization
-.alias_local
-
 # temporary vim files
 *.sw*
