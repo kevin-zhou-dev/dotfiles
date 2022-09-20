@@ -1,9 +1,19 @@
 # dotfiles
 
-## Sync dotfiles
+## Install
 
-go in local dotfiles directory and execute install.sh
+### a- Basic set up
+```bash
+sudo apt install make # automate install using Makefile
+make init-config # init folders and files
+make update-unix
+make install # install python, pip, poetry, zsh...
 ```
+
+### b- Sync dotfiles
+Go in local dotfiles directory and execute install.sh
+```bash
+git clone https://github.com/kevinzous/dotfiles.git
 cd dotfiles && chmod +x install.sh && ./install.sh
 ```
 
@@ -20,12 +30,11 @@ cd dotfiles && chmod +x install.sh && ./install.sh
 ├── .zshrc                  # zsh config, source .alias and local config (interactive non-login shell)
 ├── dotfiles_local          # local config files
 │   └── .alias_local        # local alias config
-└── install.sh              # sync script 
+├── install.sh              # sync script
+└── Makefile                # list of non-source files for the set up
 ```
 
-## install recommmendation
-
-### On Windows 
+## install on Windows 
 
 - WSL 2 : https://docs.microsoft.com/fr-fr/windows/wsl/about
 - zsh : https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH 

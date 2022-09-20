@@ -1,0 +1,6 @@
+[user]
+    email = TO_BE_CHANGED
+    name = TO_BE_CHANGED
+
+[core]
+    sshCommand = "ssh -i ~/.ssh/TO_BE_CHANGED"

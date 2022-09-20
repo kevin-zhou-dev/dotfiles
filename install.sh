@@ -15,9 +15,11 @@ function doIt() {
 		--exclude "*.sh" \
 		--exclude "*.md" \
 		--exclude "*.bak" \
+		--exclude "*.sw*" \
+		--exclude /template \
+		--exclude "Makefile" \
 		--exclude ".env" \
 		--exclude ".function" \
-		--exclude "*.sw*" \
 		--exclude "LICENSE" \
 		-avh --no-perms . ~;
   # execute commands and refresh env variables in bash_profile
