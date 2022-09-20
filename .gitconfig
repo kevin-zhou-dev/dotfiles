@@ -1,27 +1,10 @@
 [alias]
 	exec = ! "exec"
-	st = status -sb
 	versions = tag -l --sort=version:refname
 	br = branch -vv
 	bra = branch -vv --all
 	bed = branch --edit-description
-	aa = add --all :/
-	ci = commit -v
-	ca = commit --amend -v
 	save = commit -a -m "Save"
-	co = checkout
-	di = diff
-	dis = diff --stat
-	diw = diff --color-words
-	dc = diff --cached
-	dcs = diff --cached --stat
-	dcw = diff --cached --color-words
-	dh = diff HEAD~
-	dhs = diff HEAD~ --stat
-	dhw = diff HEAD~ --color-words
-	du = diff @{u}...
-	dus = diff @{u}... --stat
-	duw = diff @{u}... --color-words
 	grp = grep -C 1
 	ff = merge --ff-only
 	noff = merge --no-ff
