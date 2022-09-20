@@ -10,6 +10,7 @@ function doIt() {
 	# -a archive -v verbose -h human-readable --no-perms do not preserve permissions
 	rsync --exclude ".git/" \
 		--exclude ".DS_Store" \
+		--exclude ".gitignore" \
 		--exclude ".osx" \
 		--exclude "*.sh" \
 		--exclude "*.md" \
