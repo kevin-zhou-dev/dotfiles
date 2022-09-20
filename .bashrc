@@ -5,13 +5,13 @@ case $- in
       *) return;;
 esac
 
+# history
 # don't put duplicate lines or lines starting with space in the history.
 HISTCONTROL=ignoreboth
 # append to the history file, don't overwrite it
 shopt -s histappend
-# HISTSIZE number of commands to save in a history list. 
-HISTSIZE=1000
-HISTFILESIZE=2000
+HISTSIZE=10000
+SAVEHIST=10000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -68,11 +68,7 @@ fi
 
 # set vim as the default editor
 export VISUAL=vim
-
 export EDITOR="$VISUAL"
-
-alias python=python3
-alias tree='find . -print | sed -e "s;[^/]*/;|____;g;s;____|; |;g"'
 
 # source config files
 [ -f ~/dotfiles_local/.alias_local ] && source ~/dotfiles_local/.alias_local

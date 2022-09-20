@@ -3,6 +3,4 @@
 # -r True if file exists and is a readable file.
 
 # when .bash_profile is executed (loginshell), so is .bashrc
-if [ -f ~/.bashrc ]; then
-  source ~/.bashrc
-fi
+[ -f ~/.bashrc ] && source ~/.bashrc
