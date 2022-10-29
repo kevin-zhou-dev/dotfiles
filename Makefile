@@ -1,7 +1,7 @@
 SHELL := bash
-.SHELLFLAGS := -eu -o pipefail -c# bash strict mode
-.ONESHELL:
-.DELETE_ON_ERROR:
+.SHELLFLAGS := -eu -o pipefail -c# bash strict mode https://tech.davis-hansson.com/p/make/
+.ONESHELL: # one single shell session for a make recipe
+.DELETE_ON_ERROR: # if a Make rule fails, its target file is deleted
 MAKEFLAGS += --warn-undefined-variables
 MAKEFLAGS += --no-builtin-rules
 
