@@ -26,7 +26,7 @@ chmod +x install.sh && ./install.sh
 ├── .alias                  # custom aliases. Git-related aliases are defined in .gitconfig and in ~/.oh-my-zsh/plugins/git
 ├── .bashrc                 # bash config, source .alias and local config (interactive non-login shell)
 ├── .bash_profile           # source .bashrc (login shell)
-├── .gitconfig              # git config 
+├── .gitconfig              # git config
 ├── .inputrc                # GNU Readline Library config, used here for key bindings
 ├── .vimrc                  # vim config
 ├── .zshrc                  # zsh config, source .alias and local config (interactive non-login shell)
@@ -48,6 +48,7 @@ chmod +x install.sh && ./install.sh
 - ffmpeg : https://ffmpeg.org/
 - ripgrep : https://github.com/BurntSushi/ripgrep
 - broot : https://github.com/Canop/brootsee tree structure of folders + interactive search
+- rdfind : https://github.com/pauldreik/rdfind finds duplicate file based on their content (sha1 checksum)
 
 ## References
 
@@ -57,7 +58,7 @@ chmod +x install.sh && ./install.sh
 - http://dotfiles.github.io/
 - https://blog.flowblok.id.au/2013-02/shell-startup-scripts.html
 ![shell start up](https://blog.flowblok.id.au/static/images/shell-startup.png)
-- https://unix.stackexchange.com/questions/38175/difference-between-login-shell-and-non-login-shell 
+- https://unix.stackexchange.com/questions/38175/difference-between-login-shell-and-non-login-shell
 
 ### Dotfiles example
 

@@ -7,6 +7,6 @@ alias l='ls -CF'
 alias tree='find . -print | sed -e "s;[^/]*/;|____;g;s;____|; |;g"'
 alias python=python3
 
-# shortcuts examples 
+# shortcuts examples
 # https://github.com/webpro/dotfiles/blob/master/system/.alias
 # https://github.com/mathiasbynens/dotfiles/blob/main/.aliases

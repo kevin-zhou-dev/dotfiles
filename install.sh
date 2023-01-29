@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # go to parent directory of BASH_SOURCE (environmment variable)
-cd "$(dirname "${BASH_SOURCE}")"; 
+cd "$(dirname "${BASH_SOURCE}")";
 
 # git pull origin main;
 
@@ -30,7 +30,7 @@ function doIt() {
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
 	doIt;
 else
-	# retrieving data from standard input 
+	# retrieving data from standard input
 	# -p : display a prompt before input -n number of maximum character to be read
 	read -p "This may overwrite existing files in your home directory. Are you sure? (y/n) " -n 1;
 	echo "";

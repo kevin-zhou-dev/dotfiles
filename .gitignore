@@ -5,7 +5,7 @@ env/
 venv/
 ENV/
 
-# Windows backup files 
+# Windows backup files
 *.bak
 
 # temporary vim files

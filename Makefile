@@ -20,15 +20,8 @@ install:
 	sudo apt install -y python3.9 zsh
 	sudo apt-get install -y python3-pip python-is-python3 python3-venv xclip # -y tells apt-get not to prompt you
 
-	# install zshell 
+	# install zshell
 	sudo apt install -y zsh
-
-	# install poetry
-	curl -sSL https://install.python-poetry.org | python3 - #version 1.2.0 and above # if certificates pb : change -sSL to -sSLk to ignore certificates (not recommended)
-	echo $"export PATH=\"/home/kz_unix/.local/bin:\$PATH\"" >> ~/.zshrc
-	
-	pip install pre-commit tldr # https://github.com/tldr-pages/tldr
-	python3 -m pip install -U yt-dlp
 
 	# Make it your default shell
 	#chsh -s $(which zsh)
@@ -41,3 +34,14 @@ install:
 	sudo apt autoremove -y
 
 .PHONY: install
+
+extra-install:
+
+	# install poetry
+	curl -sSL https://install.python-poetry.org | python3 - #version 1.2.0 and above # if certificates pb : change -sSL to -sSLk to ignore certificates (not recommended)
+	echo $"export PATH=\"/home/kz_unix/.local/bin:\$PATH\"" >> ~/.zshrc
+
+	sudo apt install shellcheck
+	python3 -m pip install -U yamllint
+	python3 -m pip install -U yt-dlp
+	pip install pre-commit tldr # https://github.com/tldr-pages/tldr

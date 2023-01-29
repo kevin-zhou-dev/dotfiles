@@ -4,11 +4,12 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-# command history saved in ~/.zsh_history
+# history
 HISTSIZE=10000
 SAVEHIST=10000
+# HISTFILE=~/.cache/zsh/history
 
-# vi mode : to enter "normal mode", press Esc
+# vi mode
 bindkey -v
 export KEYTIMEOUT=1
 
@@ -21,9 +22,10 @@ COMPLETION_WAITING_DOTS="true"
 # Activate syntax highlighting
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
 
+# Plugins
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
-plugins=(git) # Example format: plugins=(rails git textmate ruby lighthouse)
+plugins=(git z)
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
@@ -33,8 +35,12 @@ else
 fi
 
 # source config files
-[ -f ~/.alias ] && source ~/.alias
 [ -f ~/dotfiles_local/.alias_local ] && source ~/dotfiles_local/.alias_local
-[ -f $ZSH/oh-my-zsh.sh ] && source $ZSH/oh-my-zsh.sh # zsh framework
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh # command-line fuzzy finder
-[ -f ~/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] && source ~/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh # fish-like syntax highlight
+[ -f ~/.alias ] && source ~/.alias
+
+# oh-my-zsh
+[ -f $ZSH/oh-my-zsh.sh ] && source $ZSH/oh-my-zsh.sh
+# command-line fuzzy finder
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# fish like syntax highlight
+[ -f ~/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] &&  source ~/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
