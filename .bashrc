@@ -5,6 +5,9 @@ case $- in
       *) return;;
 esac
 
+# set vim as default editor
+set -o vi
+
 # history
 # don't put duplicate lines or lines starting with space in the history.
 HISTCONTROL=ignoreboth
