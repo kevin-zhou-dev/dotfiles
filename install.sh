@@ -32,6 +32,33 @@ if [ "$1" == "--force" -o "$1" == "-f" ]; then
 else
 	# retrieving data from standard input
 	# -p : display a prompt before input -n number of maximum character to be read
+	echo "diff ~/ ./ --side-by-side --color --exclude ".git/" \
+		--exclude ".DS_Store" \
+		--exclude ".gitignore" \
+		--exclude ".osx" \
+		--exclude "*.sh" \
+		--exclude "*.md" \
+		--exclude "*.bak" \
+		--exclude "*.sw*" \
+		--exclude /template \
+		--exclude "Makefile" \
+		--exclude ".env" \
+		--exclude ".function" \
+		--exclude "LICENSE" "
+	diff ~/ ./ --side-by-side --color --exclude ".git/" \
+		--exclude ".DS_Store" \
+		--exclude ".gitignore" \
+		--exclude ".osx" \
+		--exclude "*.sh" \
+		--exclude "*.md" \
+		--exclude "*.bak" \
+		--exclude "*.sw*" \
+		--exclude /template \
+		--exclude "Makefile" \
+		--exclude ".env" \
+		--exclude ".function" \
+		--exclude "LICENSE" ;
+	
 	read -p "This may overwrite existing files in your home directory. Are you sure? (y/n) " -n 1;
 	echo "";
 	if [[ $REPLY =~ ^[Yy]$ ]]; then
