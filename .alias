@@ -4,6 +4,9 @@ alias ....='cd ../../..'
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+alias ls='ls -G'
+alias grep='grep --color=auto'
+
 #alias tree='find . -print | sed -e "s;[^/]*/;|____;g;s;____|; |;g"'
 #alias python=python3
 
