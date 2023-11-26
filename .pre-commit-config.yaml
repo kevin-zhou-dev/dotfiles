@@ -1,0 +1,70 @@
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+    -   id: trailing-whitespace
+    -   id: end-of-file-fixer
+    -   id: check-yaml
+        args: [--allow-multiple-documents] # allow multiple documents notably in k8s files
+    -   id: check-json
+    -   id: check-toml
+    -   id: check-added-large-files
+-   repo: https://github.com/sqlfluff/sqlfluff
+    rev: 2.1.2
+    hooks:
+    -   id: sqlfluff-lint
+        name: sqlfluff-lint
+        # Set `--processes 0` to use maximum parallelism
+        entry: sqlfluff lint --processes 0 --dialect bigquery
+        description: "Lints sql files with `SQLFluff`"
+        types: [sql]
+        exclude: tests/
+-   repo: https://github.com/psf/black
+    rev: 23.3.0  # earlier version is incompatible with click 8.1.0 https://github.com/psf/black/issues/2964
+    hooks:
+    -   id: black
+        args: [--config=pyproject.toml, lynx/, tests/]
+        types: [python]
+-   repo: https://github.com/pycqa/isort
+    rev: 5.12.0
+    hooks:
+    -   id: isort
+        files: "\\.(py)$"
+        args: [--settings-path=pyproject.toml]
+-   repo: https://github.com/PyCQA/docformatter
+    rev: v1.7.3
+    hooks:
+    -   id: docformatter
+        description: 'Formats docstrings to follow PEP 257.'
+        entry: docformatter
+        types: [python]
+# TODO: pylint to be configured
+# -   repo: https://github.com/PyCQA/pylint
+#     rev: v3.0.0a6 # Python >=3.7 requires pylint >= 2.0
+#     hooks:
+#     -   id: pylint
+#         entry: pylint
+#         args:
+#             [
+#             # "-rn", # Only display messages
+#             "-sn", # Don't display the score
+#             ]
+# TODO: mypy to be configured
+# -   repo: https://github.com/pre-commit/mirrors-mypy
+#     rev: v1.4.1
+#     hooks:
+#     -   id: mypy
+#         name: mypy
+#         description: 'mypy'
+# TODO: bandit to be configured
+# https://bandit.readthedocs.io/en/latest/config.html
+# - repo: https://github.com/PyCQA/bandit
+#   rev: 1.7.5
+#   hooks:
+#   - id: bandit
+#     args: ["--exclude", "tests/"]
+- repo: https://github.com/igorshubovych/markdownlint-cli
+  rev: v0.35.0
+  hooks:
+  - id: markdownlint
+    args: [--config=.markdownlint.yaml]
