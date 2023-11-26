@@ -68,3 +68,8 @@ repos:
   hooks:
   - id: markdownlint
     args: [--config=.markdownlint.yaml]
+- repo: https://github.com/shellcheck-py/shellcheck-py
+  rev: v0.9.0.6
+  hooks:
+  - id: shellcheck
+    args: [-e, SC2164, -e, SC2034, -e, SC1091]

@@ -1,4 +1,5 @@
-# ~/.bashrc: executed by bash for non-login shells
+# shellcheck disable=SC2148,SC2015
+# executed by bash for non-login shells
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -51,7 +52,7 @@ esac
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    test -r "$HOME"/.dircolors && eval "$(dircolors -b "$HOME"/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
@@ -74,6 +75,6 @@ export VISUAL=vim
 export EDITOR="$VISUAL"
 
 # source config files
-[ -f ~/dotfiles_local/.alias_local ] && source ~/dotfiles_local/.alias_local
-[ -f ~/.alias ] && source ~/.alias
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+[ -f "$HOME"/dotfiles_local/.alias_local ] && source "$HOME"/dotfiles_local/.alias_local
+[ -f "$HOME"/.alias ] && source "$HOME"/.alias
+[ -f "$HOME"/.fzf.bash ] && source "$HOME"/.fzf.bash

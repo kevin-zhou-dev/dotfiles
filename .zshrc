@@ -1,3 +1,4 @@
+# shellcheck disable=SC2148
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH="$HOME/.local/bin:$PATH"
@@ -8,7 +9,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # history
 HISTSIZE=10000
 SAVEHIST=10000
-# HISTFILE=~/.cache/zsh/history
+# HISTFILE="$HOME"/.cache/zsh/history
 
 # vi mode
 bindkey -v
@@ -36,12 +37,12 @@ else
 fi
 
 # oh-my-zsh
-[ -f $ZSH/oh-my-zsh.sh ] && source $ZSH/oh-my-zsh.sh
+[ -f "$ZSH"/oh-my-zsh.sh ] && source "$ZSH"/oh-my-zsh.sh
 # command-line fuzzy finder
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f "$HOME"/.fzf.zsh ] && source "$HOME"/.fzf.zsh
 # fish like syntax highlight
-[ -f ~/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] &&  source ~/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+[ -f "$HOME"/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] &&  source "$HOME"/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # source config files
-[ -f ~/.alias ] && source ~/.alias
-[ -f ~/dotfiles_local/.alias_local ] && source ~/dotfiles_local/.alias_local
+[ -f "$HOME"/.alias ] && source "$HOME"/.alias
+[ -f "$HOME"/dotfiles_local/.alias_local ] && source "$HOME"/dotfiles_local/.alias_local
