@@ -131,7 +131,7 @@ echo '.DS_Store' >> ~/.gitignore
 echo '.idea' >> ~/.gitignore
 echo "Global gitignore created"
 
-## Add in K9s installtion 
+## Add in K9s installtion
 echo "Installing k9s .."
 
 brew install k9s

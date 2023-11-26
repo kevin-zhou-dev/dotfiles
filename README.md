@@ -38,29 +38,29 @@ chmod +x install.sh && ./install.sh
 
 ## Install on Windows
 
-- WSL 2 : https://docs.microsoft.com/fr-fr/windows/wsl/about
-- zsh : https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH
-- oh-my-zsh : https://github.com/ohmyzsh/ohmyzsh.git
-- poetry : https://python-poetry.org/docs/#osx--linux--bashonwindows-install-instructions
-- fzf : https://github.com/junegunn/fzf/wiki
-- tldr : https://github.com/tldr-pages/tldr
-- pre-commit : https://pypi.org/project/pre-commit/
-- ffmpeg : https://ffmpeg.org/
-- ripgrep : https://github.com/BurntSushi/ripgrep
-- broot : https://github.com/Canop/brootsee tree structure of folders + interactive search
-- rdfind : https://github.com/pauldreik/rdfind finds duplicate file based on their content (sha1 checksum)
+- [WSL 2](https://docs.microsoft.com/fr-fr/windows/wsl/about)
+- [zsh](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH)
+- [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh.git)
+- [poetry](https://python-poetry.org/docs/#osx--linux--bashonwindows-install-instructions)
+- [fzf](https://github.com/junegunn/fzf/wiki)
+- [tldr](https://github.com/tldr-pages/tldr)
+- [pre-commit](https://pypi.org/project/pre-commit/)
+- [ffmpeg](https://ffmpeg.org/)
+- [ripgrep](https://github.com/BurntSushi/ripgrep)
+- [broot: tree structure of folders + interactive search](https://github.com/Canop/brootsee)
+- [rdfind: finds duplicate file based on their content sha1 checksum](https://github.com/pauldreik/rdfind)
 
 ## References
 
 ### Useful sources
 
-- https://missing.csail.mit.edu/2020/command-line/
-- http://dotfiles.github.io/
-- https://blog.flowblok.id.au/2013-02/shell-startup-scripts.html
+- [missing cs, command line](https://missing.csail.mit.edu/2020/command-line/)
+- [dotfiles](http://dotfiles.github.io/)
+- [shell start up scripts](https://blog.flowblok.id.au/2013-02/shell-startup-scripts.html)
 ![shell start up](https://blog.flowblok.id.au/static/images/shell-startup.png)
-- https://unix.stackexchange.com/questions/38175/difference-between-login-shell-and-non-login-shell
+- [difference-between-login-shell-and-non-login-shell](https://unix.stackexchange.com/questions/38175/difference-between-login-shell-and-non-login-shell)
 
 ### Dotfiles example
 
-- https://github.com/mathiasbynens/dotfiles/blob/main/bootstrap.sh git + rsync
-- https://github.com/anishathalye/dotfiles dotbot
+- [git + rsync](https://github.com/mathiasbynens/dotfiles/blob/main/bootstrap.sh)
+- [dotbot](https://github.com/anishathalye/dotfiles)

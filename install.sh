@@ -58,7 +58,7 @@ else
 		--exclude ".env" \
 		--exclude ".function" \
 		--exclude "LICENSE" ;
-	
+
 	read -p "This may overwrite existing files in your home directory. Are you sure? (y/n) " -n 1;
 	echo "";
 	if [[ $REPLY =~ ^[Yy]$ ]]; then
