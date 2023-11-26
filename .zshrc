@@ -35,13 +35,13 @@ else
   export EDITOR='mvim'
 fi
 
-# source config files
-[ -f ~/dotfiles_local/.alias_local ] && source ~/dotfiles_local/.alias_local
-[ -f ~/.alias ] && source ~/.alias
-
 # oh-my-zsh
 [ -f $ZSH/oh-my-zsh.sh ] && source $ZSH/oh-my-zsh.sh
 # command-line fuzzy finder
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 # fish like syntax highlight
 [ -f ~/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] &&  source ~/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# source config files
+[ -f ~/.alias ] && source ~/.alias
+[ -f ~/dotfiles_local/.alias_local ] && source ~/dotfiles_local/.alias_local
