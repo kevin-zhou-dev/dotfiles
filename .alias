@@ -6,9 +6,12 @@ alias la='ls -A'
 alias l='ls -CF'
 alias ls='ls -G'
 alias grep='grep --color=auto'
+alias gu='git reset --soft HEAD~' # git undo a single commit # Use --soft if you want to keep your changes
+alias guh='git reset --hard HEAD~' # git undo a single commit # Use --hard if you don't care about keeping the changes you made
 
 #alias tree='find . -print | sed -e "s;[^/]*/;|____;g;s;____|; |;g"'
 #alias python=python3
+
 
 # shortcuts examples
 # https://github.com/webpro/dotfiles/blob/master/system/.alias

@@ -66,11 +66,15 @@
 	line = "%C(auto)%h %<|(60,trunc)%s %C(green)%ad%C(auto)%d"
 	detail = "%C(auto)%h %s%n  %C(yellow)by %C(blue)%an %C(magenta)<%ae> [%G?] %C(green)%ad%n %C(auto)%d%n"
 
-[includeIf "gitdir:~/personal/"] # include for all .git projects under personnal/
+[includeIf "gitdir:~/personal/"] # include for all .git projects under ~/personal/ 
 	path = ~/personal/.gitconfig-personal
 
-[includeIf "gitdir:~/work/"]
+[includeIf "gitdir:~/work/"] # include for all .git projects under ~/work/ 
 	path = ~/work/.gitconfig-work
+
+[includeIf "gitdir:~/dotfiles/"] # include for all .git projects under ~/dotfiles/ 
+	path = ~/work/.gitconfig-personal
+
 [credential]
         helper =
         helper = /usr/local/share/gcm-core/git-credential-manager

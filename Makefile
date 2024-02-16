@@ -15,7 +15,7 @@ update-unix:
 	sudo apt update -y && sudo apt upgrade -y
 	sudo apt autoremove -y
 
-install:
+install-unix:
 	# install python and pip
 	sudo apt install -y python3.9 zsh
 	sudo apt-get install -y python3-pip python-is-python3 python3-venv xclip # -y tells apt-get not to prompt you
@@ -35,8 +35,7 @@ install:
 
 .PHONY: install
 
-extra-install:
-
+extra-install-unix:
 	# install poetry
 	curl -sSL https://install.python-poetry.org | python3 - #version 1.2.0 and above # if certificates pb : change -sSL to -sSLk to ignore certificates (not recommended)
 	echo $"export PATH=\"/home/kz_unix/.local/bin:\$PATH\"" >> ~/.zshrc
@@ -45,3 +44,39 @@ extra-install:
 	python3 -m pip install -U yamllint
 	python3 -m pip install -U yt-dlp
 	pip install pre-commit tldr # https://github.com/tldr-pages/tldr
+
+init-mac:
+	# homebrew
+	/bin/bash -c "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+	(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> "$(pwd)/.zprofile"
+	eval "$(/opt/homebrew/bin/brew shellenv)"
+
+install-mac:
+	# basic tools
+	brew install --cask google-chrome
+	brew install --cask firefox
+	brew install --cask visual-studio-code
+	brew install tldr # simplified man page 
+	brew install tree # display directories as trees
+	brew install fzf # command-line fuzzy finder
+	brew install ack # search tool like grep
+	brew install jq # json processor
+	brew install maccy # macOS clipboard manager # open maccy for the first time and cmd + shift + c
+
+	# oh-my-zsh
+	brew install zsh # framework for managing your zsh configuration
+	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+	# python and poetry
+	brew install pipx
+	brew install python@3.12
+	pipx install poetry
+	pipx ensurepath
+
+	brew install --cask google-cloud-sdk
+
+	# Docker
+	curl -f -o Docker.dmg https://desktop.docker.com/mac/main/arm64/137060/Docker.dmg # apple chip v4.27.2 as of 2024-02-08. For other see https://docs.docker.com/desktop/release-notes/ and https://docs.docker.com/desktop/install/mac-install/
+	sudo hdiutil attach Docker.dmg
+	sudo /Volumes/Docker/Docker.app/Contents/MacOS/install
+	sudo hdiutil detach /Volumes/Docker

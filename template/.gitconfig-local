@@ -3,4 +3,4 @@
     name = TO_BE_CHANGED
 
 [core]
-    sshCommand = "ssh -i ~/.ssh/TO_BE_CHANGED"
+    sshCommand = "ssh -i ~/.ssh/TO_BE_CHANGED" # public key # ex: ssh -i ~/.ssh/id_ed25519

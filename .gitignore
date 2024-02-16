@@ -10,3 +10,7 @@ ENV/
 
 # temporary vim files
 *.sw*
+
+# OSX
+.DS_Store
+.idea

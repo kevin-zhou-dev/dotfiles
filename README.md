@@ -4,19 +4,31 @@
 
 ### a- Basic set up
 
-```bash
+```bash 
+# unix
 git clone https://github.com/kevinzous/dotfiles.git
 cd dotfiles
 sudo apt install make # automate install using Makefile
 make init-config # init folders and files
 make update-unix
-make install # install python, pip, poetry, zsh...
+make install-unix # install python, pip, poetry, zsh...
+```
+
+```bash
+# macos
+git clone https://github.com/kevinzous/dotfiles.git
+cd dotfiles
+sudo apt install make # automate install using Makefile
+make init-config # init folders and files
+make init-mac # install homebrew
+make install-mac # install python, pip, poetry, zsh...
 ```
 
 ### b- Sync dotfiles by executing install.sh
 
 ```bash
 chmod +x install.sh && ./install.sh
+# update .gitconfig-local
 ```
 
 ## Structure
@@ -38,7 +50,6 @@ chmod +x install.sh && ./install.sh
 
 ## Install on Windows
 
-- [WSL 2](https://docs.microsoft.com/fr-fr/windows/wsl/about)
 - [zsh](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH)
 - [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh.git)
 - [poetry](https://python-poetry.org/docs/#osx--linux--bashonwindows-install-instructions)
