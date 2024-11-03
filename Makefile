@@ -56,6 +56,9 @@ install-mac:
 	brew install --cask google-chrome
 	brew install --cask firefox
 	brew install --cask visual-studio-code
+	brew install --cask notion
+	brew install --cask spotify
+
 	brew install tldr # simplified man page 
 	brew install tree # display directories as trees
 	brew install fzf # command-line fuzzy finder
