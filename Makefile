@@ -51,6 +51,20 @@ init-mac:
 	(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> "$(pwd)/.zprofile"
 	eval "$(/opt/homebrew/bin/brew shellenv)"
 
+	# remove all icons from dock 
+	defaults write com.apple.dock persistent-apps -array; killall Dock
+
+	# change dock autohide delay and time
+	# source: https://macos-defaults.com/dock/autohide.html
+	defaults write com.apple.dock persistent-apps -array; killall Dock --remove all icons from dock
+	defaults write com.apple.dock autohide -bool "true"
+	defaults write com.apple.dock autohide-delay -float 0
+	defaults write com.apple.dock autohide-time-modifier -float 0.4; killall Dock
+
+	# Faster delete key
+	# source: https://superuser.com/questions/677665/increase-the-speed-at-which-the-delete-key-deletes-things-on-osx
+	defaults write NSGlobalDomain KeyRepeat -int 0
+
 install-mac:
 	# basic tools
 	brew install --cask google-chrome
