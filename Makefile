@@ -33,8 +33,6 @@ install-unix:
 
 	sudo apt autoremove -y
 
-.PHONY: install
-
 extra-install-unix:
 	# install poetry
 	curl -sSL https://install.python-poetry.org | python3 - #version 1.2.0 and above # if certificates pb : change -sSL to -sSLk to ignore certificates (not recommended)
@@ -91,6 +89,7 @@ install-mac:
 	pipx ensurepath
 
 	brew install --cask google-cloud-sdk
+	brew install gh
 
 	# Docker
 	curl -f -o Docker.dmg https://desktop.docker.com/mac/main/arm64/137060/Docker.dmg # apple chip v4.27.2 as of 2024-02-08. For other see https://docs.docker.com/desktop/release-notes/ and https://docs.docker.com/desktop/install/mac-install/
