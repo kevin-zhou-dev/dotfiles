@@ -6,8 +6,22 @@ alias la='ls -A'
 alias l='ls -CF'
 alias ls='ls -G'
 alias grep='grep --color=auto'
+
+alias history='omz_history -E' # history with date
+
+# most frequently used git aliases, some may be redundant with aliases from omz
+alias gl='git pull'
+alias gcb='git checkout -b'
+alias gco='git checkout'
 alias gu='git reset --soft HEAD~' # git undo a single commit # Use --soft if you want to keep your changes
 alias guh='git reset --hard HEAD~' # git undo a single commit # Use --hard if you don't care about keeping the changes you made
+alias gst='git status'
+alias gaa='git add .'
+alias gcmsg='git commit --message'
+alias gpsup='git push --set-upstream origin $(git_current_branch)'
+alias gppr='git push --set-upstream origin $(git_current_branch) && gh pr create --web' 
+
+# push to branch origin + open a web page to edit pr, needs gh cli to be installed
 
 #alias tree='find . -print | sed -e "s;[^/]*/;|____;g;s;____|; |;g"'
 #alias python=python3
