@@ -41,11 +41,11 @@ fi
 # command-line fuzzy finder
 [ -f "$HOME"/.fzf.zsh ] && source "$HOME"/.fzf.zsh
 # fish like syntax highlight
-[ -f "$HOME"/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] &&  source "$HOME"/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+[ -f "$HOME"/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] && source "$HOME"/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # source config files
 [ -f "$HOME"/.alias ] && source "$HOME"/.alias
-[ -f "$HOME"/dotfiles_local/.alias_local ] && source "$HOME"/dotfiles_local/.alias_local
+[ -f "$HOME"/.alias_local ] && source "$HOME"/.alias_local
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

@@ -6,10 +6,10 @@ MAKEFLAGS += --warn-undefined-variables
 MAKEFLAGS += --no-builtin-rules
 
 init-config:
-	mkdir ~/work ~/personal ~/dotfiles_local
+	mkdir ~/work ~/personal
 	cp template/.gitconfig-local ~/personal/.gitconfig-personal
 	cp template/.gitconfig-local ~/work/.gitconfig-work
-	touch ~/dotfiles_local/.alias_local
+	cp template/.alias_local ~/.alias_local
 
 update-unix:
 	sudo apt update -y && sudo apt upgrade -y
@@ -31,9 +31,6 @@ install-unix:
 	# syntax highlighter
 	git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh-syntax-highlighting
 
-	sudo apt autoremove -y
-
-extra-install-unix:
 	# install poetry
 	curl -sSL https://install.python-poetry.org | python3 - #version 1.2.0 and above # if certificates pb : change -sSL to -sSLk to ignore certificates (not recommended)
 	echo $"export PATH=\"/home/kz_unix/.local/bin:\$PATH\"" >> ~/.zshrc
@@ -49,7 +46,7 @@ init-mac:
 	(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> "$(pwd)/.zprofile"
 	eval "$(/opt/homebrew/bin/brew shellenv)"
 
-	# remove all icons from dock 
+	# remove all icons from dock
 	defaults write com.apple.dock persistent-apps -array; killall Dock
 
 	# change dock autohide delay and time
@@ -77,10 +74,13 @@ install-mac:
 	brew install ack # search tool like grep
 	brew install jq # json processor
 	brew install maccy # macOS clipboard manager # open maccy for the first time and cmd + shift + c
+	brew install broot # tree structure of folders + interactive search # need to launch broot to finalize install
 
 	# oh-my-zsh
 	brew install zsh # framework for managing your zsh configuration
 	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+	git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+	git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 
 	# python and poetry
 	brew install pipx
@@ -96,3 +96,6 @@ install-mac:
 	sudo hdiutil attach Docker.dmg
 	sudo /Volumes/Docker/Docker.app/Contents/MacOS/install
 	sudo hdiutil detach /Volumes/Docker
+
+sync-dotfiles:
+	chmod +x install.sh && ./install.sh

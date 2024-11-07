@@ -10,11 +10,9 @@ sudo apt install make # install Make
 make init-config # init folders and files
 make update-unix
 make install-unix # install python, pip, poetry, zsh...
-chmod +x install.sh && ./install.sh # sync dotfiles by executing install.sh
+make sync-dotfiles # sync dotfiles by executing install.sh
 # update manually personal/.gitconfig-personal and work/.gitconfig-work
 ```
-
-### b- Basic set up + sync dotfiles by executing install.sh
 
 ```bash
 # macos
@@ -24,7 +22,7 @@ sudo apt install make # install Make
 make init-config # init folders and files
 make init-mac # install homebrew
 make install-mac # install python, pip, poetry, zsh...
-chmod +x install.sh && ./install.sh # sync dotfiles by executing install.sh
+make sync-dotfiles # sync dotfiles by executing install.sh
 # update manually personal/.gitconfig-personal and work/.gitconfig-work
 ```
 
@@ -39,24 +37,10 @@ chmod +x install.sh && ./install.sh # sync dotfiles by executing install.sh
 ├── .inputrc                # GNU Readline Library config, used here for key bindings
 ├── .vimrc                  # vim config
 ├── .zshrc                  # zsh config, source .alias and local config (interactive non-login shell)
-├── dotfiles_local          # local config files
-│   └── .alias_local        # local alias config
 ├── install.sh              # sync script
 └── Makefile                # list of non-source files for the set up
 ```
 
-## Install on Windows
-
-- [zsh](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH)
-- [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh.git)
-- [poetry](https://python-poetry.org/docs/#osx--linux--bashonwindows-install-instructions)
-- [fzf](https://github.com/junegunn/fzf/wiki): auto-sugestion based on history
-- [tldr](https://github.com/tldr-pages/tldr)
-- [pre-commit](https://pypi.org/project/pre-commit/)
-- [ffmpeg](https://ffmpeg.org/)
-- [ripgrep](https://github.com/BurntSushi/ripgrep)
-- [broot](https://github.com/Canop/brootsee): tree structure of folders + interactive search
-- [rdfind: finds duplicate file based on their content sha1 checksum](https://github.com/pauldreik/rdfind)
 
 ## References
 
@@ -73,3 +57,15 @@ chmod +x install.sh && ./install.sh # sync dotfiles by executing install.sh
 - [git + rsync](https://github.com/mathiasbynens/dotfiles/blob/main/bootstrap.sh)
 - [dotbot](https://github.com/anishathalye/dotfiles)
 
+### Useful lib
+
+- [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh.git)
+- [poetry](https://python-poetry.org/docs/#osx--linux--bashonwindows-install-instructions)
+- [fzf](https://github.com/junegunn/fzf/wiki): auto-sugestion based on history
+- [tldr](https://github.com/tldr-pages/tldr)
+- [pre-commit](https://pypi.org/project/pre-commit/)
+- [broot](https://github.com/Canop/brootsee): tree structure of folders + interactive search
+- [ffmpeg](https://ffmpeg.org/)
+- [ripgrep](https://github.com/BurntSushi/ripgrep)
+- [rdfind: finds duplicate file based on their content sha1 checksum](https://github.com/pauldreik/rdfind)
+- [yt-dlp](https://github.com/yt-dlp/yt-dlp)
