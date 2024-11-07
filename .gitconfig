@@ -73,10 +73,7 @@
 	path = ~/work/.gitconfig-work
 
 [includeIf "gitdir:~/dotfiles/"] # include for all .git projects under ~/dotfiles/ 
-	path = ~/work/.gitconfig-personal
+	path = ~/personal/.gitconfig-personal
 
-[credential]
-        helper =
-        helper = /usr/local/share/gcm-core/git-credential-manager
 [credential "https://dev.azure.com"]
         useHttpPath = true
