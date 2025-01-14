@@ -18,7 +18,6 @@ make sync-dotfiles # sync dotfiles by executing install.sh
 # macos
 git clone https://github.com/kevinzous/dotfiles.git
 cd dotfiles
-sudo apt install make # install Make
 make init-config # init folders and files
 make init-mac # install homebrew
 make install-mac # install python, pip, poetry, zsh...
